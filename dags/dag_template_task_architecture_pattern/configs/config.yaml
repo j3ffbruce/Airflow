@@ -1,0 +1,11 @@
+dev:
+  endpoints:
+    randomuser:
+      url: "https://randomuser.me/api/"
+      timeout : 30
+    
+prd:
+  endpoints:
+    randomuser:
+      url: "https://randomuser.me/api/"
+      timeout : 30
