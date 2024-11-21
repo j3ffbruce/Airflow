@@ -7,8 +7,8 @@ import json
 import logging
 
 @dag(
-    'dag_template_api_request',
-    start_date=datetime(2024, 11, 12),
+    dag_id='dag_template_api_request',
+    start_date=datetime(year=2024, month=11, day=12),
     dagrun_timeout=timedelta(minutes=5),
     catchup=False,
     schedule_interval="0/30 * * * *",
@@ -51,7 +51,7 @@ def init():
     group_id="etl", 
     tooltip="Tasks for Extract, Transform, and Load"
   )
-  def etl():
+  def etl() -> None:
     extracted = extract()
     transformed = transform(extracted)
     load(transformed)
