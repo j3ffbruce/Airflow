@@ -1,13 +1,17 @@
-# Ignore files
+# Ignore all files
 *
 
 # Allow specific files and directories
 !.gitignore
 !*.py
-!dags/
 !requirements.txt
 !packages.txt
 !Dockerfile
+!dags/
+!dags/dag_template_task_architecture_pattern/
+!dags/dag_template_task_architecture_pattern/tasks/
+!dags/dag_template_task_architecture_pattern/configs/
+!dags/dag_template_task_architecture_pattern/configs/config.yaml
 
 # Ignore specific files
 exampledag.py
